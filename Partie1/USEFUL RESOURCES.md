@@ -55,6 +55,16 @@ Some examples:
 </button>
 ```
 
+| Class name | Description |
+|------------|-------------|
+| `border` | Add a border to an element |
+| `border-gray-300` | Set the border color to gray-300 |
+| `rounded-md` | Add rounded corners to an element |
+| `p-2` | Add padding to an element |
+| `bg-blue-500` | Set the background color to blue-500 |
+| `text-white` | Set the text color to white |
+| More classes :arrow_right: | [Tailwind CSS Documentation](https://tailwindcss.com/docs) |
+
 # Set up React Router
 
 To set up React Router, you can use the `react-router-dom` npm package. This package provides easy-to-use utilities for routing in React applications.
@@ -148,4 +158,31 @@ import { useSignOut } from 'react-auth-kit';
 /* ... */
 ```
 
+# How to use Heroicons?
 
+You can use [Heroicons](https://heroicons.com/) to add beautiful icons to your application.
+
+To use Heroicons, you can install the `@heroicons/react` npm package by running the following command in your terminal:
+
+```bash
+npm install @heroicons/react
+```
+
+Once you have installed Heroicons, you can use the `Icon` component to add icons to your application. For example:
+
+```tsx
+import { EyeIcon } from '@heroicons/react/24/solid';
+
+function MyComponent() {
+  return (
+    <div>
+      <EyeIcon className='w-6 h-6 text-red-500' />
+    </div>
+  );
+}
+```
+
+In this example, we use the `EyeIcon` component from Heroicons to add an eye icon to the page. We use the `w-6` and `h-6` classes to set the width and height of the icon, and the `text-red-500`(``#ff0000``) class to set the color of the icon.
+
+> [!TIP]
+> The [Heroicons documentation](https://heroicons.com/) is a great resource to refer to while working with Heroicons.
