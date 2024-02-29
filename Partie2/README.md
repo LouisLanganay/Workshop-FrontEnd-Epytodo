@@ -1,23 +1,23 @@
-# Workshop Frontend EpyTodo - Partie 2
+# Workshop Frontend EpyTodo - Part 2
 
-Bienvenue à la suite du Workshop Frontend EpyTodo ! Dans ce second workshop, nous allons construire la page de Todolist avec une fonctionnalité de drag and drop.
+Welcome to the continuation of the Workshop Frontend EpyTodo! In this second workshop, we will build the Todolist page with a drag and drop functionality.
 
-## Objectifs :
-- Créer une page de Todolist interactive
-- Implémenter la fonctionnalité de drag and drop pour réorganiser les tâches
+## Objectives:
+- Create an interactive Todolist page
+- Implement drag and drop functionality to rearrange tasks
 
-## Prérequis :
-- Participation à la Partie 1 du Workshop Frontend
+## Prerequisites:
+- Participation in Part 1 of the Workshop Frontend
 
-## Contenu :
-1. Révision des concepts de la Partie 1
-2. Introduction à la fonctionnalité de Todolist et Drag and Drop
-3. Intégration de la librairie de Drag and Drop (React DnD, react-beautiful-dnd, etc.)
-4. Mise en place de la structure de la page Todolist
-5. Intégration des fonctionnalités CRUD pour les tâches
-6. Implémentation du drag and drop pour réorganiser les tâches
-7. Test et débogage de l'application
-8. Conclusion et perspectives
+## Contents:
+1. Review of concepts from Part 1
+2. Introduction to Todolist functionality and Drag and Drop
+3. Integration of Drag and Drop library (React DnD, react-beautiful-dnd, etc.)
+4. Setting up the structure of the Todolist page
+5. Integration of CRUD functionalities for tasks
+6. Implementation of drag and drop to rearrange tasks
+7. Testing and debugging of the application
+8. Conclusion and future perspectives
 
 > [!IMPORTANT]
-> Assurez-vous d'avoir participé à la Partie 1 pour suivre ce workshop.
+> Make sure to have participated in Part 1 to follow along with this workshop.

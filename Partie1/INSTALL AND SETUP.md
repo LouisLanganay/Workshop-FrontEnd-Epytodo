@@ -51,24 +51,24 @@ npx tailwindcss init
 2. Add Tailwind to your PostCSS configuration:  
 &nbsp;&nbsp;&nbsp;&nbsp;Add tailwindcss and autoprefixer to your ``postcss.config.js`` file, or wherever PostCSS is configured in your project.  
 ```js
-        module.exports = {
-          plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
-          },
-        }
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
 ```
 3. Configure your template paths:  
 &nbsp;&nbsp;&nbsp;&nbsp;Add the paths to all of your template files in your ``tailwind.config.js`` file.  
 ```js
-        /** @type {import('tailwindcss').Config} */
-        module.exports = {
-          content: ["./src/**/*.{html,js}"],
-          theme: {
-            extend: {},
-          },
-          plugins: [],
-        }
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
 ```
 
 4. Add the Tailwind directives to your CSS:  

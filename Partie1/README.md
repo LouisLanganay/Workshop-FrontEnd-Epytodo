@@ -1,27 +1,29 @@
-# Workshop Frontend EpyTodo - Partie 1
+# Workshop Frontend EpyTodo - Part 1
 
-Bienvenue au Workshop Frontend EpyTodo - Partie 1 ! Dans ce 1er workshop, nous allons nous concentrer sur la mise en place d'un projet React avec TypeScript et la création des pages de login, register, home et not found.
+Welcome to the Workshop Frontend EpyTodo - Part 1! In this first workshop, we will focus on setting up a React project with TypeScript and creating the login, register, home, and not found pages.
 
-Objectifs:
-- Mettre en place un projet React avec TypeScript
-- Créer les pages de login, register, home et not found
-- Utiliser Tailwind CSS, Heroicons et Headless UI pour le design et l'interface utilisateur
+Objectives:
+- Set up a React project with TypeScript
+- Create the login, register, home, and not found pages
+- Utilize Tailwind CSS, Heroicons, and Headless UI for design and user interface
 
-Prérequis:
-- Connaissances de base en HTML, CSS et JavaScript
-- Node.js installé sur votre système
-- Éditeur de code (VSCode recommandé)
+Prerequisites:
+- Basic knowledge of [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Node.js](https://github.com/LouisLanganay/Workshop-FrontEnd-Epytodo/blob/main/Partie1/INSTALL%20AND%20SETUP.md#install-nodejs) installed on your system
 
-Contenu:
-1. Introduction au projet et explication des technologies utilisées
-2. Configuration de l'environnement de développement (Node.js, npm)
-3. Création d'un nouveau projet React avec TypeScript
-4. Mise en place des pages de login, register, home et not found
-5. Intégration de Tailwind CSS pour le stylage
-6. Utilisation des icônes de Heroicons
-7. Gestion des routes avec React Router
-8. Utilisation de composants UI de Headless UI pour une meilleure accessibilité
-9. Test et débogage de l'application
+> [!NOTE]
+> If you haven't completed the EpyTodo Backend project, you can use the [EpyTodo backend project](https://github.com/LouisLanganay/Workshop-FrontEnd-Epytodo/tree/main/Backend) provided to test the application.
+
+Contents:
+1. Introduction to the project and explanation of the technologies used
+2. Setting up the development environment (Node.js, npm)
+3. Creating a new React project with TypeScript
+4. Setting up the login, register, home, and not found pages
+5. Integrating Tailwind CSS for styling
+6. Using Heroicons icons
+7. Managing routes with React Router
+8. Using Headless UI components for improved accessibility
+9. Testing and debugging the application
 
 > [!IMPORTANT]
-> La participation à cette partie est nécessaire pour accéder à la Partie 2 du Workshop.
+> Participation in this part is necessary to access Part 2 of the Workshop.
