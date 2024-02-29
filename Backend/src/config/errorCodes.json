@@ -1,0 +1,34 @@
+{
+    "ok": {
+        "message": "OK",
+        "code": 200
+    },
+    "created": {
+        "message": "Created",
+        "code": 201
+    },
+    "badRequest": {
+        "message": "Bad parameter",
+        "code": 400
+    },
+    "unauthorized": {
+        "message": "No token, authorization denied",
+        "code": 401
+    },
+    "forbidden": {
+        "message": "Forbidden",
+        "code": 403
+    },
+    "notFound": {
+        "message": "Not found",
+        "code": 404
+    },
+    "conflict": {
+        "message": "Conflict",
+        "code": 409
+    },
+    "internalServerError": {
+        "message": "Internal server error",
+        "code": 500
+    }
+}

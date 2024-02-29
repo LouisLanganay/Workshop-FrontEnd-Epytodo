@@ -1,0 +1,36 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: epytodo
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./epytodo.sql:/docker-entrypoint-initdb.d/epytodo.sql
+
+  app:
+    depends_on:
+      - db
+    links:
+      - db
+    build:
+      context: .
+      dockerfile: Dockerfile-node
+    ports:
+      - "3000:3000"
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: epytodo
+      PORT: 3000
+      SECRET: "secret"
+
+volumes:
+    db_data:
