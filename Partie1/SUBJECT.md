@@ -25,7 +25,7 @@ In this section, we will integrate Tailwind CSS into our React project to style 
 
 :arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#integrate-tailwind-css) to integrate Tailwind CSS into your React project.
 
-> [!TIP]
+> [!NOTE]
 > [Tailwind CSS Documentation](https://tailwindcss.com/docs) is a great resource you gonna need to refer to while working with Tailwind CSS.
 
 
@@ -36,6 +36,8 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 1. Install React Router ``npm install react-router-dom``  
 2. Create a new folder named `pages` inside the `src` directory.  
 3. Inside the pages folder, create two new files named `Login.tsx` and `Register.tsx`.
+
+:arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#set-up-react-router) to set up React Router.
 
 ## Login page
 
@@ -48,6 +50,8 @@ __Objectives of the login page__:
 > Use the `useState` hook to manage the form state.  
 > Use ``axios`` to make requests to the backend. [How to use axios?](USEFUL%20RESOURCES.md#axios).
 
+> [!TIP]
+> [How to save the user's authentication state?](USEFUL%20RESOURCES.md#how-to-save-the-users-authentication-state)
 
 <details>
   <summary>If you need help, you can refer to the following example (SPOILER).</summary>
@@ -100,5 +104,8 @@ __Objectives of the login page__:
     };
 
     export default Login;
-    ```
+  ```
 </details>
+
+> [!TIP]
+> [How to style your page using Tailwind CSS?](USEFUL%20RESOURCES.md#how-to-style-using-tailwind-css)
