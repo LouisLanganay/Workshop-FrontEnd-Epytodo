@@ -40,7 +40,7 @@ cd my-epytodo-front
 
 ## Add Tailwind CSS
 
-Tailwind CSS is a utility-first CSS framework. Here's how you can add it to your React project:
+Tailwind CSS is a utility-first CSS framework[^1]. Here's how you can add it to your React project:
 
 1. Install Tailwind CSS:  
 &nbsp;&nbsp;&nbsp;&nbsp;Install tailwindcss and its peer dependencies via npm, and create your ``tailwind.config.js`` file.  
@@ -92,3 +92,6 @@ npm start
 ## Conclusion
 
 You've successfully installed Node.js, set up a React project with TypeScript, and added Tailwind CSS for styling. You're now ready to start building your EpyTodo frontend application!
+
+
+[^1]: [Tailwind CSS Documentation](https://tailwindcss.com/docs) - Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build designs directly in your markup. It is a great tool to rapidly build custom designs without leaving your HTML.

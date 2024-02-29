@@ -36,6 +36,6 @@ graph TD;
 
 Now that you have an overview of the workshop, let's [get started](SUBJECT.md)!
 
-[^1]: [HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Learn/HTML)
-[^2]: [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[^3]: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[^1]: [HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Learn/HTML) - HTML is the standard markup language for documents designed to be displayed in a web browser.
+[^2]: [Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS) - CSS is a style sheet language used for describing the presentation of a document written in HTML.
+[^3]: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - JavaScript is a programming language that enables interactive web pages and is an essential part of web applications.
