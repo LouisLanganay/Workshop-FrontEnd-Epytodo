@@ -25,5 +25,80 @@ In this section, we will integrate Tailwind CSS into our React project to style 
 
 :arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#integrate-tailwind-css) to integrate Tailwind CSS into your React project.
 
+> [!TIP]
+> [Tailwind CSS Documentation](https://tailwindcss.com/docs) is a great resource you gonna need to refer to while working with Tailwind CSS.
 
-# Creating the first pages
+
+# Creating the login and register pages
+
+Now that we have set up our React project with TypeScript and integrated Tailwind CSS, let's create our first pages.
+
+1. Install React Router ``npm install react-router-dom``  
+2. Create a new folder named `pages` inside the `src` directory.  
+3. Inside the pages folder, create two new files named `Login.tsx` and `Register.tsx`.
+
+## Login page
+
+__Objectives of the login page__:
+- Create a form with email and password fields
+- Add validation for the form fields (e.g., required, email format)
+- Handle form submission and display success or error messages
+
+> [!TIP]
+> Use the `useState` hook to manage the form state.  
+> Use ``axios`` to make requests to the backend. [How to use axios?](USEFUL%20RESOURCES.md#axios).
+
+
+<details>
+  <summary>If you need help, you can refer to the following example (SPOILER).</summary>
+
+  ```tsx
+    import React, { useState } from 'react';
+
+    const Login: React.FC = () => {
+      const [email, setEmail] = useState('');
+      const [password, setPassword] = useState('');
+      const [error, setError] = useState('');
+
+      const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email || !password) {
+          setError('Please enter your email and password.');
+        } else {
+          // Handle form submission (e.g., make a request to the backend with axios)
+          // ...
+        }
+      };
+
+      return (
+        <div>
+          <h1>Login</h1>
+          {error && <p>{error}</p>}
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor='email'>Email</label>
+              <input
+                type='email'
+                id='email'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor='password'>Password</label>
+              <input
+                type='password'
+                id='password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <button type='submit'>Login</button>
+          </form>
+        </div>
+      );
+    };
+
+    export default Login;
+    ```
+</details>
