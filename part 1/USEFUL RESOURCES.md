@@ -156,7 +156,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 To implement the logout functionality, use the `useSignOut` hook from `react-auth-kit` to sign out the user. For example:
 
 ```tsx
-import { useSignOut } from 'react-auth-kit';
+import useSignOut from 'react-auth-kit/hooks/useSignOut';
 
 /* ... */
 
