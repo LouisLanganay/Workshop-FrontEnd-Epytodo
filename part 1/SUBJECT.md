@@ -23,7 +23,7 @@ Now that we have set up the project, we need to setup Tailwind CSS for styling t
 
 In this section, we will integrate Tailwind CSS into our React project to style the application. Tailwind CSS is a utility-first CSS framework that allows us to quickly build custom designs without writing any CSS.
 
-:arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#integrate-tailwind-css) to integrate Tailwind CSS into your React project.
+:arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#add-tailwind-css) to integrate Tailwind CSS into your React project.
 
 > [!NOTE]
 > [Tailwind CSS Documentation](https://tailwindcss.com/docs) is a great resource you gonna need to refer to while working with Tailwind CSS.
@@ -37,7 +37,7 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 2. Create a new folder named `pages` inside the `src` directory.  
 3. Inside the pages folder, create two new files named `Login.tsx` and `Register.tsx`.
 
-:arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#set-up-react-router) to set up React Router.
+:arrow_right: Follow the steps described [here](USEFUL%20RESOURCES.md#set-up-react-router) to set up React Router.
 
 ## Login page
 
@@ -77,7 +77,6 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 
       return (
         <div>
-          <h1>Login</h1>
           {error && <p>{error}</p>}
           <form onSubmit={handleSubmit}>
             <div>
@@ -128,6 +127,8 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
     const Register: React.FC = () => {
       const [email, setEmail] = useState('');
       const [password, setPassword] = useState('');
+      const [name, setName] = useState('');
+      const [lastname, setLastname] = useState('');
       const [confirmPassword, setConfirmPassword] = useState('');
       const [error, setError] = useState('');
 
@@ -145,9 +146,26 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 
       return (
         <div>
-          <h1>Register</h1>
           {error && <p>{error}</p>}
           <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor='name'>First Name</label>
+              <input
+                type='text'
+                id='firstname'
+                value={firstname}
+                onChange={(e) => setFirstname(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor='name'>Last Name</label>
+              <input
+                type='text'
+                id='name'
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
             <div>
               <label htmlFor='email'>Email</label>
               <input
