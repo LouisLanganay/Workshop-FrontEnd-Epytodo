@@ -10,10 +10,13 @@ Welcome to the **Workshop Frontend EpyTodo**! In this workshop, we will focus on
 
 ## Table of Contents
 
-- [Part 1: Setting up a React project with TypeScript](Partie1/README.md)
-    - [Install and Setup](Partie1/INSTALL%20AND%20SETUP.md)
-    - [Subject](Partie1/SUBJECT.md)
-    - [Useful Resources](Partie1/USEFUL%20RESOURCES.md)
+- [Part 1: Setting up a React project with TypeScript](part%201/README.md)
+    - [Install and Setup](part%201/INSTALL%20AND%20SETUP.md)
+    - [Subject](part%201/SUBJECT.md)
+    - [Useful Resources](part%201/USEFUL%20RESOURCES.md)
+- [Part 2: Implementing the Drag and Drop feature](part%202/README.md)
+    - [Subject](part%202/SUBJECT.md)
+    - [Useful Resources](part%202/USEFUL%20RESOURCES.md)
 
 
 
