@@ -41,7 +41,7 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 
 ## Login page
 
-:checkered_flag: __Objectives of the login page__:
+:checkered_flag: <u>Objectives of the login page</u>:
 - Create a form with email and password fields
 - Add validation for the form fields (e.g., required, email format)
 - Handle form submission and display success or error messages
@@ -113,7 +113,7 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 
 ## Register page
 
-:checkered_flag: __Objectives of the register page__:
+:checkered_flag: <u>Objectives of the register page</u>:
 - Create a form with email, password, and confirm password fields
 - Add validation for the form fields (e.g., required, email format, password match)
 - Handle form submission and display success or error messages
@@ -207,7 +207,7 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 
 ## Home page
 
-:checkered_flag: __Objectives of the home page__:
+:checkered_flag: <u>Objectives of the home page</u>:
 - Create a simple home page with a welcome message and a link to the login page
 - Add a navigation bar with links to the login and register pages
 
@@ -235,7 +235,7 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 
 ## Not found page
 
-:checkered_flag: __Objectives of the not found page__:
+:checkered_flag: <u>Objectives of the not found page</u>:
 - Create a simple 404 page with a message indicating that the page was not found
 - Add a link to the home page
 

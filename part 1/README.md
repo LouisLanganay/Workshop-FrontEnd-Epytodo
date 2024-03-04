@@ -6,19 +6,19 @@
 > [!NOTE]
 > If you haven't completed the EpyTodo Backend project, you can use the [EpyTodo backend project](../Backend/) provided to test the application.
 
-Welcome to the **Workshop Frontend EpyTodo - Part 1**! In this first workshop, we will focus on __setting up a React project with TypeScript__ and creating the login, register, home, and not found pages.
+Welcome to the **Workshop Frontend EpyTodo - Part 1**! In this first workshop, we will focus on <u>setting up a React project with TypeScript</u> and creating the login, register, home, and not found pages.
 
-:checkered_flag: __Objectives of the workshop__:
+:checkered_flag: <u>Objectives of the workshop</u>:
 - Set up a React project with TypeScript
 - Create the login, register, home, and not found pages
 - Utilize Tailwind CSS, Heroicons, and Headless UI for design and user interface
 
 > [!CAUTION]
-> :warning: __Prerequisites__:
+> :warning: <u>Prerequisites</u>:
 > - Basic knowledge of _HTML_[^1], _CSS_[^2], and _JavaScript_[^3]
 > - [Node.js](INSTALL%20AND%20SETUP.md#install-nodejs) installed on your system. [-> INSTALL AND SETUP GUIDE <-](INSTALL%20AND%20SETUP.md#install-nodejs)
 
-:books: __Workshop content__:
+:books: <u>Workshop content</u>:
 
 ```mermaid
 graph TD;

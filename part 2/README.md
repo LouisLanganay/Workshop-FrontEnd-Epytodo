@@ -5,15 +5,15 @@
 
 Welcome to the **Workshop Frontend EpyTodo - Part 2**! In this continuation workshop, we will build upon the foundation laid in Part 1 and delve into more advanced functionalities for our EpyTodo application.
 
-:checkered_flag: __Objectives of Part 2__:
+:checkered_flag: <u>Objectives of Part 2</u>:
 - Integration of Drag and Drop
 - Integration of CRUD functionalities for tasks
 
 > [!CAUTION]
-> :warning: __Prerequisites__:
+> :warning: <u>Prerequisites</u>:
 > - Completion of [**Workshop Frontend EpyTodo - Part 1**](../part1/README.md)
 
-:books: __Workshop content__:
+:books: <u>Workshop content</u>:
 
 ```mermaid
 graph TD;
