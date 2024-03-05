@@ -26,7 +26,7 @@ To integrate drag and drop functionality, we will use the `react-dnd` library. T
 - ``TodoTask``: This component will represent a single task in the Todolist and will contain the task details (``title``, ``description``, ``created_at``, ``due_time``, ``status``). Use the `useDrag` hook from the `react-dnd` library to make the task draggable.
 
 
-> [!TIP]
+> [!NOTE]
 > For more information on how to use the `react-dnd` library, you can refer to the [official documentation](https://www.npmjs.com/package/react-dnd).
 
 > [!TIP]
