@@ -1,6 +1,6 @@
-# Setting Up Node.js and React with TypeScript and Tailwind CSS
+# Setting Up Node.js and React with JavaScript and Tailwind CSS
 
-This guide will walk you through the steps to install Node.js and set up a React project with TypeScript and Tailwind CSS.
+This guide will walk you through the steps to install Node.js and set up a React project with JavaScript and Tailwind CSS.
 
 ## Install Node.js
 
@@ -29,9 +29,9 @@ node --version
 Now that you have Node.js installed, you can set up a React project. We'll use `create-react-app` to bootstrap our project:
 
 1. Open your terminal or command prompt.  
-2. Run the following command to create a new React project with TypeScript:  
+2. Run the following command to create a new React project with JavaScript:  
 ```bash
-npx create-react-app my-epytodo-front --template typescript
+npx create-react-app my-epytodo-front
 ```
 3. Navigate to your project directory:  
 ```bash
@@ -88,7 +88,7 @@ npm start
 
 ## Conclusion
 
-You've successfully installed Node.js, set up a React project with TypeScript, and added Tailwind CSS for styling. You're now ready to start building your EpyTodo frontend application!
+You've successfully installed Node.js, set up a React project with JavaScript, and added Tailwind CSS for styling. You're now ready to start building your EpyTodo frontend application!
 
 
 [^1]: [Tailwind CSS Documentation](https://tailwindcss.com/docs) - Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build designs directly in your markup. It is a great tool to rapidly build custom designs without leaving your HTML.

@@ -1,7 +1,7 @@
 # Review of concepts from Part 1
 Before proceeding with Todolist functionality and drag and drop integration, let's review the concepts covered in Part 1. Ensure you have completed the following:
 
-- Creation of a React project with TypeScript  
+- Creation of a React project with JavaScript  
 - Integration of Tailwind CSS for styling  
 - Implementation of login, register, home, and not found pages  
 - Familiarity with React Router for page navigation  
@@ -35,164 +35,124 @@ To integrate drag and drop functionality, we will use the `react-dnd` library. T
 <details>
   <summary>If you need help for the TodoColumn, you can refer to the following example (SPOILER).</summary>
 
-    ```tsx
-    import React from 'react';
-    import TodoTask from './TodoTask';
-    import { DndProvider, useDrag, useDrop } from 'react-dnd';
-    import { HTML5Backend } from 'react-dnd-html5-backend';
+    ```js
+      import React from 'react';
+      import TodoTask from './TodoTask';
+      import { DndProvider, useDrag, useDrop } from 'react-dnd';
+      import { HTML5Backend } from 'react-dnd-html5-backend';
 
-    interface Task {
-      id: number;
-      title: string;
-      description: string;
-      created_at: string;
-      due_time: string;
-      status: string;
-    }
+      const TodoColumn = ({ tasks, status, onMoveTask, onDragStart, onDragEnd }) => {
+        const [{ isOver }, drop] = useDrop({
+          accept: 'task',
+          drop: (item) => onMoveTask(item.id, status),
+          collect: (monitor) => ({
+            isOver: !!monitor.isOver(),
+          }),
+        });
 
-    interface TodoColumnProps {
-      tasks: Task[];
-      status: string;
-      onMoveTask: (taskId: number, status: string) => void;
-      onDragStart: (taskId: number) => void;
-      onDragEnd: () => void;
-    };
+        return (
+          <div ref={drop} className='w-1/3 p-4 border-2 border-gray-300 rounded-md'>
+            <h2 className='text-lg font-bold'>{status}</h2>
+            {tasks.map((task, index) => (
+              <TodoTask
+                key={task.id}
+                task={task}
+                index={index}
+                onDragStart={onDragStart}
+                onDragEnd={onDragEnd}
+              />
+            ))}
+          </div>
+        );
+      };
 
-    const TodoColumn: React.FC<TodoColumnProps> = ({ tasks, status, onMoveTask, onDragStart, onDragEnd }) => {
-      const [{ isOver }, drop] = useDrop({
-        accept: 'task',
-        drop: (item: Task) => onMoveTask(item.id, status),
-        collect: (monitor) => ({
-          isOver: !!monitor.isOver(),
-        }),
-      });
-
-      return (
-        <div ref={drop} className='w-1/3 p-4 border-2 border-gray-300 rounded-md'>
-          <h2 className='text-lg font-bold'>{status}</h2>
-          {tasks.map((task, index) => (
-            <TodoTask
-              key={task.id}
-              task={task}
-              index={index}
-              onDragStart={onDragStart}
-              onDragEnd={onDragEnd}
-            />
-          ))}
-        </div>
-      );
-    };
-
-    export default TodoColumn;
+      export default TodoColumn;
     ```
 </details>
 
 <details>
   <summary>If you need help for the TodoTask, you can refer to the following example (SPOILER).</summary>
 
-    ```tsx
-    import React from 'react';
-    import { useDrag } from 'react-dnd';
+    ```js
+      import React from 'react';
+      import { useDrag } from 'react-dnd';
 
-    interface Task {
-      id: number;
-      title: string;
-      description: string;
-      created_at: string;
-      due_time: string;
-      status: string;
-    }
+      const TodoTask = ({ task, index, onDragStart, onDragEnd }) => {
+        const [{ isDragging }, drag] = useDrag({
+          type: 'task',
+          item: { id: task.id, index },
+          begin: () => onDragStart(task.id),
+          end: () => onDragEnd(),
+          collect: (monitor) => ({
+            isDragging: !!monitor.isDragging(),
+          }),
+        });
 
-    interface TodoTaskProps {
-      task: Task;
-      index: number;
-      onDragStart: (taskId: number) => void;
-      onDragEnd: () => void;
-    }
-
-    const TodoTask: React.FC<TodoTaskProps> = ({ task, index, onDragStart, onDragEnd }) => {
-      const [{ isDragging }, drag] = useDrag({
-        type: 'task',
-        item: { id: task.id, index },
-        begin: () => onDragStart(task.id),
-        end: () => onDragEnd(),
-        collect: (monitor) => ({
-          isDragging: !!monitor.isDragging(),
-        }),
-      });
-
-      return (
-        <div>
+        return (
+          <div ref={drag}>
             { /* Your task card */ }
-        </div>
-      );
-    };
+          </div>
+        );
+      };
 
-    export default TodoTask;
+      export default TodoTask;
     ```
 </details>
 
 <details>
   <summary>If you need help for the Todolist, you can refer to the following example (SPOILER).</summary>
 
-    ```tsx
-    import React, { useState } from 'react';
-    import TodoColumn from './TodoColumn';
+    ```js
+      import React, { useState } from 'react';
+      import TodoColumn from './TodoColumn';
+      import { DndProvider } from 'react-dnd';
+      import { HTML5Backend } from 'react-dnd-html5-backend';
 
-    interface Task {
-      id: number;
-      title: string;
-      description: string;
-      created_at: string;
-      due_time: string;
-      status: string;
-    }
+      const Todolist = () => {
+        const [tasks, setTasks] = useState([]);
 
-    const Todolist: React.FC = () => {
-      const [tasks, setTasks] = useState<Task[]>([]); // You can create some tasks here to test the Todolist before implementing the backend calls
+        const onMoveTask = (taskId, status) => {
+          // Move the task to the new status
+        };
 
-      const onMoveTask = (taskId: number, status: string) => {
-        // Move the task to the new status
+        const onDragStart = (taskId) => {
+          // Set the dragging task
+        };
+
+        const onDragEnd = () => {
+          // Reset the dragging task
+        };
+
+        return (
+          <DndProvider backend={HTML5Backend}>
+            <div className='flex justify-center space-x-4'>
+              <TodoColumn
+                tasks={tasks.filter((task) => task.status === 'todo')}
+                status='Todo'
+                onMoveTask={onMoveTask}
+                onDragStart={onDragStart}
+                onDragEnd={onDragEnd}
+              />
+              <TodoColumn
+                tasks={tasks.filter((task) => task.status === 'in-progress')}
+                status='In Progress'
+                onMoveTask={onMoveTask}
+                onDragStart={onDragStart}
+                onDragEnd={onDragEnd}
+              />
+              <TodoColumn
+                tasks={tasks.filter((task) => task.status === 'done')}
+                status='Done'
+                onMoveTask={onMoveTask}
+                onDragStart={onDragStart}
+                onDragEnd={onDragEnd}
+              />
+            </div>
+          </DndProvider>
+        );
       };
 
-      const onDragStart = (taskId: number) => {
-        // Set the dragging task
-      };
-
-      const onDragEnd = () => {
-        // Reset the dragging task
-      };
-
-      return (
-        <DndProvider backend={HTML5Backend}>
-          <div className='flex justify-center space-x-4'>
-            <TodoColumn
-              tasks={tasks.filter((task) => task.status === 'todo')}
-              status='Todo'
-              onMoveTask={onMoveTask}
-              onDragStart={onDragStart}
-              onDragEnd={onDragEnd}
-            />
-            <TodoColumn
-              tasks={tasks.filter((task) => task.status === 'in-progress')}
-              status='In Progress'
-              onMoveTask={onMoveTask}
-              onDragStart={onDragStart}
-              onDragEnd={onDragEnd}
-            />
-            <TodoColumn
-              tasks={tasks.filter((task) => task.status === 'done')}
-              status='Done'
-              onMoveTask={onMoveTask}
-              onDragStart={onDragStart}
-              onDragEnd={onDragEnd}
-            />
-          </div>
-        </DndProvider>
-      );
-    };
-
-    export default Todolist;
+      export default Todolist;
     ```
 </details>
 
@@ -218,38 +178,39 @@ The form to create a new task should is the same as the form to register a new u
 <details>
   <summary>If you need help for the DeleteTaskArea, you can refer to the following example (SPOILER).</summary>
 
-```tsx
-    import React from 'react';
-    import axios from 'axios';
+```js
+import React from 'react';
+import { useDrop } from 'react-dnd'; // Add the missing import statement
+import axios from 'axios';
 
-    interface Task {
-      id: number;
-      title: string;
-      description: string;
-      due_time: string;
-    }
+interface Task {
+  id: number;
+  title: string;
+  description: string;
+  due_time: string;
+}
 
-    interface DeleteTaskAreaProps {
-      onDropToDelete: (taskId: number) => void;
-    }
+interface DeleteTaskAreaProps {
+  onDropToDelete: (taskId: number) => void;
+}
 
-    const DeleteTaskArea: React.FC<DeleteTaskAreaProps> = ({ onDropToDelete }) => {
-      const [{ isOver }, drop] = useDrop({
-        accept: 'task',
-        drop: (item: Task) => onDropToDelete(item.id),
-        collect: (monitor) => ({
-          isOver: !!monitor.isOver(),
-        }),
-      });
+const DeleteTaskArea: React.FC<DeleteTaskAreaProps> = ({ onDropToDelete }) => {
+  const [{ isOver }, drop] = useDrop({
+    accept: 'task',
+    drop: (item: Task) => onDropToDelete(item.id),
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    }),
+  });
 
-      return (
-        <div ref={drop} className='w-1/3 p-4 border-2 border-gray-300 rounded-md'>
-          <h2 className='text-lg font-bold'>Delete</h2>
-        </div>
-      );
-    };
+  return (
+    <div ref={drop} className='w-1/3 p-4 border-2 border-gray-300 rounded-md'>
+      <h2 className='text-lg font-bold'>Delete</h2>
+    </div>
+  );
+};
 
-    export default DeleteTaskArea;
+export default DeleteTaskArea;
 ```
 </details>
 

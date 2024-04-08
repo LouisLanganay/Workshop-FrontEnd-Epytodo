@@ -13,66 +13,63 @@ npm install react-dnd @types/react-dnd
 
 2. Example of drag and drop functionality:
 
-```tsx
-import React from 'react';
+```js
+import React, { useState } from 'react';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 
-interface Item {
-  type: string;
-  id: number;
-  index: number;
-}
-
-const DragAndDropExample: React.FC = () => {
-  const [items, setItems] = React.useState<Item[]>([
+const DragAndDropExample = () => {
+  const [items, setItems] = useState([
     { type: 'item', id: 1, index: 0 },
     { type: 'item', id: 2, index: 1 },
     { type: 'item', id: 3, index: 2 },
   ]);
 
-    const moveItem = (dragIndex: number, hoverIndex: number) => {
-        const dragItem = items[dragIndex];
-        setItems((prevItems) => {
-        const newItems = [...prevItems];
-        newItems.splice(dragIndex, 1);
-        newItems.splice(hoverIndex, 0, dragItem);
-        return newItems.map((item, index) => ({ ...item, index }));
-        });
+  const moveItem = (dragIndex, hoverIndex) => {
+    const dragItem = items[dragIndex];
+    setItems((prevItems) => {
+      const newItems = [...prevItems];
+      newItems.splice(dragIndex, 1);
+      newItems.splice(hoverIndex, 0, dragItem);
+      return newItems.map((item, index) => ({ ...item, index }));
+    });
+  };
 
-    const renderItem = (item: Item, index: number) => {
-        const [{ isDragging }, drag] = useDrag({
-        item: { type: 'item', id: item.id, index },
-        collect: (monitor) => ({
-            isDragging: monitor.isDragging(),
-        }),
-        });
+  const renderItem = (item, index) => {
+    const [{ isDragging }, drag] = useDrag({
+      item: { type: 'item', id: item.id, index },
+      collect: (monitor) => ({
+        isDragging: monitor.isDragging(),
+      }),
+    });
 
-        const [, drop] = useDrop({
-        accept: 'item',
-        hover: (item: Item) => {
-            if (item.index !== index) {
-            moveItem(item.index, index);
-            }
-        },
-        });
-
-        return (
-        <div ref={drag} style={{ opacity: isDragging ? 0.5 : 1 }}>
-            {item.id}
-        </div>
-        );
+    const [, drop] = useDrop({
+      accept: 'item',
+      hover: (item) => {
+        if (item.index !== index) {
+          moveItem(item.index, index);
+        }
+      },
+    });
 
     return (
-        <DndProvider backend={HTML5Backend}>
-        <div>
-            {items.map((item, index) => renderItem(item, index))}
-        </div>
-        </DndProvider>
+      <div ref={drag} style={{ opacity: isDragging ? 0.5 : 1 }}>
+        {item.id}
+      </div>
     );
+  };
+
+  return (
+    <DndProvider backend={HTML5Backend}>
+      <div>
+        {items.map((item, index) => renderItem(item, index))}
+      </div>
+    </DndProvider>
+  );
 };
 
 export default DragAndDropExample;
+
 ```
 
 # Modals
@@ -85,15 +82,10 @@ Open the `src/components` folder and create a new file named `Modal.tsx`. This f
 
 2. **Implement the modal component:**
 Implement the `Modal` component using the following code:
-```tsx
+```js
 import React from 'react';
 
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) {
     return null;
   }
@@ -109,17 +101,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
 };
 
 export default Modal;
+
 ```
 
 3. **Use the modal component:**
 
 You can use the `Modal` component in your application by passing the `isOpen` and `onClose` props.
 
-```tsx
+```js
 import React, { useState } from 'react';
 import Modal from './Modal';
 
-const App: React.FC = () => {
+const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (

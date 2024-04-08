@@ -1,8 +1,8 @@
-# Creating a new React project with TypeScript
+# Creating a new React project with JavaScript
 
-In this section, we will create a new React project with TypeScript using the `create-react-app` tool. This tool allows us to quickly set up a new React project with all the necessary configurations and dependencies.
+In this section, we will create a new React project with JavaScript using the `create-react-app` tool. This tool allows us to quickly set up a new React project with all the necessary configurations and dependencies.
 
-:arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#set-up-a-react-project) to create a new React project with TypeScript.
+:arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#set-up-a-react-project) to create a new React project with JavaScript.
 
 Once you have set up the project, you can test it by running the development server and opening the application in your web browser.
 
@@ -13,8 +13,8 @@ npm start
 This will start the development server and open the application in your default web browser.
 
 <details>
-  <summary>You should see the default React application running with TypeScript.</summary>
-    <img src="assets/react-app.png" alt="React application running with TypeScript">
+  <summary>You should see the default React application running with JavaScript.</summary>
+    <img src="assets/react-app.png" alt="React application running with JavaScript">
 </details>
 
 Now that we have set up the project, we need to setup Tailwind CSS for styling the application. We will cover this in the next section.
@@ -31,7 +31,7 @@ In this section, we will integrate Tailwind CSS into our React project to style 
 
 # Creating the login and register pages
 
-Now that we have set up our React project with TypeScript and integrated Tailwind CSS, let's create our first pages.
+Now that we have set up our React project with JavaScript and integrated Tailwind CSS, let's create our first pages.
 
 1. Install React Router ``npm install react-router-dom``  
 2. Create a new folder named `pages` inside the `src` directory.  
@@ -57,15 +57,15 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 <details>
   <summary>If you need help, you can refer to the following example (SPOILER).</summary>
 
-  ```tsx
+  ```js
     import React, { useState } from 'react';
 
-    const Login: React.FC = () => {
+    const Login = () => {
       const [email, setEmail] = useState('');
       const [password, setPassword] = useState('');
       const [error, setError] = useState('');
 
-      const handleSubmit = (e: React.FormEvent) => {
+      const handleSubmit = (e) => {
         e.preventDefault();
         if (!email || !password) {
           setError('Please enter your email and password.');
@@ -88,15 +88,7 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div>
-              <label htmlFor='password'>Password</label>
-              <input
-                type='password'
-                id='password'
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
+            {/* Add password field */}
             <button type='submit'>Login</button>
           </form>
         </div>
@@ -121,18 +113,18 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 <details>
   <summary>If you need help, you can refer to the following example (SPOILER).</summary>
 
-  ```tsx
+  ```js
     import React, { useState } from 'react';
 
-    const Register: React.FC = () => {
+    const Register = () => {
       const [email, setEmail] = useState('');
-      const [password, setPassword] = useState('');
-      const [name, setName] = useState('');
-      const [lastname, setLastname] = useState('');
-      const [confirmPassword, setConfirmPassword] = useState('');
+      // Add state for first name
+      // Add state for last name
+      // Add state for password
+      // Add state for confirm password
       const [error, setError] = useState('');
 
-      const handleSubmit = (e: React.FormEvent) => {
+      const handleSubmit = (e) => {
         e.preventDefault();
         if (!email || !password || !confirmPassword) {
           setError('Please enter your email, password, and confirm password.');
@@ -157,42 +149,10 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
                 onChange={(e) => setFirstname(e.target.value)}
               />
             </div>
-            <div>
-              <label htmlFor='name'>Last Name</label>
-              <input
-                type='text'
-                id='name'
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor='email'>Email</label>
-              <input
-                type='email'
-                id='email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor='password'>Password</label>
-              <input
-                type='password'
-                id='password'
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor='confirmPassword'>Confirm Password</label>
-              <input
-                type='password'
-                id='confirmPassword'
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-            </div>
+            {/* Add last name field */}
+            {/* Add email field */}
+            {/* Add password field */}
+            {/* Add confirm password field */}
             <button type='submit'>Register</button>
           </form>
         </div>
@@ -214,11 +174,11 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 <details>
   <summary>If you need help, you can refer to the following example (SPOILER).</summary>
 
-  ```tsx
+  ```js
     import React from 'react';
     import { Link } from 'react-router-dom';
 
-    const Home: React.FC = () => {
+    const Home = () => {
       return (
         <div>
           <h1>Welcome to EpyTodo!</h1>
@@ -242,11 +202,11 @@ Now that we have set up our React project with TypeScript and integrated Tailwin
 <details>
   <summary>If you need help, you can refer to the following example (SPOILER).</summary>
 
-  ```tsx
+  ```js
     import React from 'react';
     import { Link } from 'react-router-dom';
 
-    const NotFound: React.FC = () => {
+    const NotFound = () => {
       return (
         <div>
           <h1>404 - Page Not Found</h1>

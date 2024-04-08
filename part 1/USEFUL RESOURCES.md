@@ -10,7 +10,7 @@ npm install axios
 
 Once you have installed Axios, you can use it to make requests to the backend. Here's an example of how to use Axios to make a ``POST`` request to the login endpoint:
 
-```tsx
+```js
 import axios from 'axios';
 
 const fetchData = async () => {
@@ -38,7 +38,7 @@ You can use [Tailwind CSS classes](https://tailwindcss.com/docs) to style the pa
 Some examples:
 
 - An input field with a border and padding:
-```tsx
+```js
 <input
   type='email'
   id='email'
@@ -49,7 +49,7 @@ Some examples:
 ```
 
 - A button with a background color and padding:
-```tsx
+```js
 <button type='submit' className='bg-blue-500 text-white p-2 rounded-md'>
   Login
 </button>
@@ -71,7 +71,7 @@ To set up React Router[^2], you can use the `react-router-dom` npm package. This
 
 For example, you can create a `Router` component in your `App.tsx` file and use the `Route` component to define the routes for your pages:
 
-```tsx
+```js
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
@@ -103,7 +103,7 @@ To save the user's authentication state in your React application, you can use t
 ## Login
 To implement the login functionality, use the `useSignIn` hook from `react-auth-kit` to sign in the user. For example:
 
-```tsx
+```js
 import useSignIn from 'react-auth-kit/hooks/useSignIn';
 
 
@@ -132,7 +132,7 @@ import useSignIn from 'react-auth-kit/hooks/useSignIn';
 
 To check the user's authentication state, use the `useAuthUser` hook from `react-auth-kit` to get the user object. For example:
 
-```tsx
+```js
 import useAuthUser from 'react-auth-kit/hooks/useAuthUser';
 import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 
@@ -155,7 +155,7 @@ import useAuthHeader from 'react-auth-kit/hooks/useAuthHeader';
 
 To implement the logout functionality, use the `useSignOut` hook from `react-auth-kit` to sign out the user. For example:
 
-```tsx
+```js
 import useSignOut from 'react-auth-kit/hooks/useSignOut';
 
 /* ... */
@@ -179,7 +179,7 @@ npm install @heroicons/react
 
 Once you have installed Heroicons, you can use the `Icon` component to add icons to your application. For example:
 
-```tsx
+```js
 import { EyeIcon } from '@heroicons/react/24/solid';
 
 function MyComponent() {

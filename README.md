@@ -1,6 +1,6 @@
 # Workshop-FrontEnd-Epytodo
 
-Welcome to the **Workshop Frontend EpyTodo**! In this workshop, we will focus on setting up a React project with TypeScript and creating the frontend for the EpyTodo API[^1].
+Welcome to the **Workshop Frontend EpyTodo**! In this workshop, we will focus on setting up a React project with JavaScript and creating the frontend for the EpyTodo API[^1].
 
 > [!IMPORTANT]
 > Participation to the first part is necessary to access the second part of the Workshop.
@@ -10,7 +10,7 @@ Welcome to the **Workshop Frontend EpyTodo**! In this workshop, we will focus on
 
 ## Table of Contents
 
-- [Part 1: Setting up a React project with TypeScript](part%201/README.md)
+- [Part 1: Setting up a React project with JavaScript](part%201/README.md)
     - [Install and Setup](part%201/INSTALL%20AND%20SETUP.md)
     - [Subject](part%201/SUBJECT.md)
     - [Useful Resources](part%201/USEFUL%20RESOURCES.md)
