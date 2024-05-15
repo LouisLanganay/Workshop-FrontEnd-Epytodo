@@ -35,7 +35,7 @@ To integrate drag and drop functionality, we will use the `react-dnd` library. T
 <details>
   <summary>If you need help for the TodoColumn, you can refer to the following example (SPOILER).</summary>
 
-    ```js
+```js
       import React from 'react';
       import TodoTask from './TodoTask';
       import { DndProvider, useDrag, useDrop } from 'react-dnd';
@@ -67,13 +67,13 @@ To integrate drag and drop functionality, we will use the `react-dnd` library. T
       };
 
       export default TodoColumn;
-    ```
+```
 </details>
 
 <details>
   <summary>If you need help for the TodoTask, you can refer to the following example (SPOILER).</summary>
 
-    ```js
+```js
       import React from 'react';
       import { useDrag } from 'react-dnd';
 
@@ -96,13 +96,13 @@ To integrate drag and drop functionality, we will use the `react-dnd` library. T
       };
 
       export default TodoTask;
-    ```
+```
 </details>
 
 <details>
   <summary>If you need help for the Todolist, you can refer to the following example (SPOILER).</summary>
-
-    ```js
+  
+```js
       import React, { useState } from 'react';
       import TodoColumn from './TodoColumn';
       import { DndProvider } from 'react-dnd';
@@ -153,7 +153,7 @@ To integrate drag and drop functionality, we will use the `react-dnd` library. T
       };
 
       export default Todolist;
-    ```
+```
 </details>
 
 > [!NOTE]
