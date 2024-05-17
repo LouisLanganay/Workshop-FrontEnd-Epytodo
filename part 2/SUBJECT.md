@@ -16,7 +16,7 @@ In this section, we will introduce the Todolist functionality and the concept of
 
 To integrate drag and drop functionality, we will use the `react-dnd` library. This library provides a smooth and seamless drag and drop experience for users.
 
-:arrow_right: Follow the steps described [here](INSTALL%20AND%20SETUP.md#Integrate Drag and Drops) to integrate the `react-dnd` library into your React project.
+:arrow_right: Follow the steps described [here](./USEFUL%20RESOURCES.md#integrate-drag-and-drop) to integrate the `react-dnd` library into your React project.
 
 ## Designing the Todolist
 
@@ -183,21 +183,10 @@ import React from 'react';
 import { useDrop } from 'react-dnd'; // Add the missing import statement
 import axios from 'axios';
 
-interface Task {
-  id: number;
-  title: string;
-  description: string;
-  due_time: string;
-}
-
-interface DeleteTaskAreaProps {
-  onDropToDelete: (taskId: number) => void;
-}
-
-const DeleteTaskArea: React.FC<DeleteTaskAreaProps> = ({ onDropToDelete }) => {
+const DeleteTaskArea = ({ onDropToDelete }) => {
   const [{ isOver }, drop] = useDrop({
     accept: 'task',
-    drop: (item: Task) => onDropToDelete(item.id),
+    drop: (item) => onDropToDelete(item.id),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
