@@ -86,9 +86,16 @@ npm start
 ```
 2. Open your browser and navigate to `http://localhost:3000` to view your React app.
 
-## Conclusion
+## Run the Backend Server
 
-You've successfully installed Node.js, set up a React project with JavaScript, and added Tailwind CSS for styling. You're now ready to start building your EpyTodo frontend application!
+To run the backend server, you need to use docker-compose.
+
+1. Go to the `Backend` folder
+2. Run the following command:  
+```bash
+sudo docker-compose up --build
+```
+3. Open your browser and navigate to `http://localhost:3003/` to view your backend server.
 
 
 [^1]: [Tailwind CSS Documentation](https://tailwindcss.com/docs) - Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build designs directly in your markup. It is a great tool to rapidly build custom designs without leaving your HTML.
