@@ -78,7 +78,7 @@ In this section, we will introduce the concept of modals.
 A modal is a dialog box or popup window that is displayed on top of the current page to provide additional information or functionality.
 
 1. **Create your modal component:**
-Open the `src/components` folder and create a new file named `Modal.tsx`. This file will contain the code for your modal component.
+Open the `src/components` folder and create a new file named `Modal.js`. This file will contain the code for your modal component.
 
 2. **Implement the modal component:**
 Implement the `Modal` component using the following code:

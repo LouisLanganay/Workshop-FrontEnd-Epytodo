@@ -35,7 +35,7 @@ Now that we have set up our React project with JavaScript and integrated Tailwin
 
 1. Install React Router ``npm install react-router-dom``  
 2. Create a new folder named `pages` inside the `src` directory.  
-3. Inside the pages folder, create two new files named `Login.tsx` and `Register.tsx`.
+3. Inside the pages folder, create two new files named `Login.js` and `Register.js`.
 
 :arrow_right: Follow the steps described [here](USEFUL%20RESOURCES.md#set-up-react-router) to set up React Router.
 

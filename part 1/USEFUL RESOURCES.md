@@ -69,7 +69,7 @@ Some examples:
 
 To set up React Router[^2], you can use the `react-router-dom` npm package. This package provides easy-to-use utilities for routing in React applications.
 
-For example, you can create a `Router` component in your `App.tsx` file and use the `Route` component to define the routes for your pages:
+For example, you can create a `Router` component in your `App.js` file and use the `Route` component to define the routes for your pages:
 
 ```js
 import React from 'react';
