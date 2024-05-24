@@ -95,6 +95,9 @@ export default App;
 
 # How to save the user's authentication state?
 
+> [!CAUTION]
+> Ce package ne fonctionne pas chez certaines personnes. Si c'est votre cas utilisez l'arternative des cookies (Cherchez un package npm pour ça).
+
 To save the user's authentication state in your React application, you can use the `react-auth-kit` npm package. This package provides easy-to-use utilities for managing user authentication and storing authentication tokens[^3] securely.
 
 > [!NOTE]
