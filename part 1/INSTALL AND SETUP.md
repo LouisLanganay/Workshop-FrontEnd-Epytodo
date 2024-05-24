@@ -49,7 +49,7 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
 2. Add Tailwind to your PostCSS configuration:  
-&nbsp;&nbsp;&nbsp;&nbsp;Add tailwindcss and autoprefixer to your ``postcss.config.js`` file, or wherever PostCSS is configured in your project.  
+&nbsp;&nbsp;&nbsp;&nbsp;Add tailwindcss and autoprefixer to your ``postcss.config.js`` file ( !! create it if not exist), or wherever PostCSS is configured in your project.  
 ```js
 module.exports = {
   plugins: {
